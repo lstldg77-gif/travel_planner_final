@@ -298,7 +298,7 @@ def generate_final_report(date_str, recommendation, restaurants, errors):
 
 def main():
     parser = argparse.ArgumentParser(description="CLI 기반 AI 국내 여행 플래너")
-    parser.add_argument("-date", required=True, help="여행 기준일: YYYY-MM-DD")
+    parser.add_argument("-date", "--date", required=True, help="여행 기준일 (YYYY-MM-DD 형식)")
     args = parser.parse_args()
 
     if not validate_date(args.date):
